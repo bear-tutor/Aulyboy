@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { UistandardPage } from '../uistandard/uistandard.page';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  [x: string]: any;
 
-  constructor() {}
+  constructor(public router:Router) {}
+
+  xx(){
+    this.router.navigate(['/uistandard']);
+  }
 
 }
