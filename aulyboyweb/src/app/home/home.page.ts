@@ -12,9 +12,13 @@ export class HomePage {
 
   constructor(public router:Router) {}
 
-  goMovie(){
-    this.router.navigate(['/uistandard']);
+  ngOnInit() {
   }
 
-
+  editProfile(){
+    this.router.navigate(['/profile']);
+  }
+  goDetailPage(){
+    this.router.navigate(['/detail-movie']);
+  }
 }

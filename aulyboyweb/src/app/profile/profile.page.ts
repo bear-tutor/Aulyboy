@@ -13,8 +13,8 @@ export class ProfilePage implements OnInit {
   ngOnInit() {
   }
 
-  zz(){
-    this.router.navigate(['/uistandard']);
+  goSave(){
+    this.router.navigate(['/home']);
   }
 
 }
