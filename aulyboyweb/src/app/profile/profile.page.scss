@@ -1,9 +1,15 @@
 ion-content {
     --background: black;
+    position: absolute;
 }
 .img-size{
-    width: 130px;
-    height: 130px;
-    justify-content: center;
-    display: flex;
+    width: 150px;
+    height: 160px;
+}
+.profile-gate-label {
+    width: 350px;
+    margin-bottom: 0.5em;
+    color: #fff;
+    font-size: 45px;
+    text-align: center;
 }
