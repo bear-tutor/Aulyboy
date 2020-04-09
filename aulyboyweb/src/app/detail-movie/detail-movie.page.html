@@ -1,9 +1,70 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>detailMovie</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <ion-row>
+    <ion-col size="0.5">
+    </ion-col>
+    <ion-col size="2">
+      <ion-text color="danger">
+        <h2>Aulyboy</h2>
+      </ion-text>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4.8">
+    </ion-col>
+    <div class="movieName">
+      ไซตามะ
+    </div>
+    <ion-col size="3">
+    </ion-col>
+  </ion-row>
 
+  <ion-row>
+    <ion-col size="4.8">
+    </ion-col>
+    <ion-col size="6" (click)="goDetailPage()">
+      <ion-thumbnail class="img-size">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRY9bMq4kHtIcAO8iHZVB_jXQlLI2QqSKUL7eyrg806X6Qd4Y5z&usqp=CAU">
+      </ion-thumbnail>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="4.8">
+    </ion-col>
+    <div class="detail">
+      รายละเอียด
+    </div>
+    <ion-col size="3">
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="4.2">
+    </ion-col>
+    <div class="detail1">
+      จากมังงะออนไลน์ ในปี 2009 โดยผลงานของนักเขียนนามปากกา “ONE” ที่ต่อมาได้รับการปรับปรุงโดยนักวาด Eyesied 21 อย่าง
+      “ยูสูเกะ มุราตะ” สู่ผลงานรูปแบบอนิเมชั่นสุดมันส์!! ที่หลายคนตั้งตาคอยแห่งปี 2015
+      ที่จะเปลี่ยนทุกความเชื่อในตัวเหล่าซูเปอร์ฮีโร่ที่ทุกคนเคยรู้จัก แน่ใจแล้วหรือว่า.. จะยังมีฮีโร่คนใดเทียบเท่า
+      “พี่หนุ่มหัวโล้น” คนนี้ได้!?
+    </div>
+    <ion-col size="3">
+    </ion-col>
+  </ion-row>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <ion-row>
+    <ion-col size="5.8">
+    </ion-col>
+    <ion-col size="6" (click)="backToHome()">
+      <ion-button color="light" class="button" class="ion-text-center">
+        Back
+      </ion-button>
+    </ion-col>
+  </ion-row>
 </ion-content>
