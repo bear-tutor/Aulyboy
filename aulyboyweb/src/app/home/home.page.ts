@@ -12,8 +12,9 @@ export class HomePage {
 
   constructor(public router:Router) {}
 
-  xx(){
+  goMovie(){
     this.router.navigate(['/uistandard']);
   }
+
 
 }
