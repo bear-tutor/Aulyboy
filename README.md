@@ -7,7 +7,7 @@ GET GetMovieById(id: string): MovieDetail
     /api/movie/{id}
 
 UserController
-GET GetAllUsers(): User[*]
+GET GetAllUsers(): User[*]    // 
     /api/user
 
 --------------------------------------
