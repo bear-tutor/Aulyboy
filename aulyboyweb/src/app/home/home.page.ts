@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { UistandardPage } from '../uistandard/uistandard.page';
 import { Router } from '@angular/router';
+import { CloudSyncService } from '../cloud-sync.service';
+import { HttpClient } from '@angular/common/http';
+import { MovieDetail } from 'src/models/moviedetail';
 
 @Component({
   selector: 'app-home',
@@ -10,15 +13,25 @@ import { Router } from '@angular/router';
 export class HomePage {
   [x: string]: any;
 
-  constructor(public router:Router) {}
+  public result : MovieDetail[] = [];
+
+  constructor(public router: Router, public cloud: CloudSyncService) {
+    this.cloud.moviesDetail().subscribe(data => {
+      if (data != null) {
+        this.result = data
+        console.log(this.result);
+      }
+    });
+
+  }
 
   ngOnInit() {
   }
 
-  editProfile(){
+  editProfile() {
     this.router.navigate(['/profile']);
   }
-  goDetailPage(){
+  goDetailPage() {
     this.router.navigate(['/detail-movie']);
   }
 }
