@@ -26,6 +26,19 @@
   </ion-row>
 
   <ion-row>
+    <ion-col size="3">
+    </ion-col>
+    <ion-col size="1.2"(click)="goSave()" *ngFor ="let item of dataUser">
+      <ion-thumbnail class="img-size">
+        <img
+          src="{{item.imageUrl}}">
+      </ion-thumbnail>
+    </ion-col>
+    <ion-col size="3">
+    </ion-col>
+  </ion-row>
+<!-- 
+  <ion-row>
     <ion-col size="2.5">
     </ion-col>
     <ion-col (click)="goSave()">
@@ -60,37 +73,37 @@
     </ion-col>
     <ion-col size="2">
     </ion-col>
-  </ion-row>
+  </ion-row> -->
 
   <ion-row>
-    <ion-col size="2.5">
+    <ion-col size="3">
     </ion-col>
-    <ion-col size="1.2" class="ion-text-center">
+    <ion-col size="1.2" class="ion-text-center" *ngFor ="let item of dataUser">
       <ion-text color="light" (click)="goSave()">
-        <h6>ออ</h6>
+        <h6>{{item.name}}</h6>
       </ion-text>
     </ion-col>
-    <ion-col size="2" class="ion-text-center">
+    <!-- <ion-col size="2" class="ion-text-center">
       <ion-text color="light" (click)="goSave()">
         <h6>เต</h6>
       </ion-text>
     </ion-col>
-    <ion-col size="1" class="ion-text-center">
+    <ion-col size="2" class="ion-text-center">
       <ion-text color="light" (click)="goSave()">
         <h6>อู</h6>
       </ion-text>
     </ion-col>
-    <ion-col size="1.7" class="ion-text-center">
+    <ion-col size="2" class="ion-text-center">
       <ion-text color="light" (click)="goSave()">
         <h6>ปุ๋ย</h6>
       </ion-text>
     </ion-col>
-    <ion-col size="1.5" class="ion-text-center">
+    <ion-col size="2" class="ion-text-center">
       <ion-text color="light" (click)="goSave()">
         <h6>ควอตส์&ควินท์</h6>
       </ion-text>
-    </ion-col>
-    <ion-col size="2">
+    </ion-col> -->
+    <ion-col size="3">
     </ion-col>
   </ion-row>
 
