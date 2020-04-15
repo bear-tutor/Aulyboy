@@ -1,12 +1,12 @@
 <ion-content>
-  <ion-row>
-    <ion-col size="0.5">
-    </ion-col>
-    <ion-col size="2">
+
+  <ion-row class="head">
+    <div class="aulyboy">
       <ion-text color="danger">
         <h2>Aulyboy</h2>
       </ion-text>
-    </ion-col>
+    </div>
+    <ion-col size="3"></ion-col>
     <ion-col size="7">
       <ion-searchbar></ion-searchbar>
     </ion-col>
@@ -22,46 +22,25 @@
     </ion-col>
   </ion-row>
 
-  <!-- <ion-row>
-    <ion-col size="0.3"></ion-col>
-    <ion-col size="1.9" (click)="goDetailPage()" *ngFor="let item of result">
-      <ion-thumbnail class="img-size">
-        <img src="{{ item.imageUrl }}">
-      </ion-thumbnail>
-    </ion-col>
-    <ion-col size="0.5"></ion-col>
-  </ion-row> -->
-
-  <ion-grid>
-    <ion-row>
-
-      <ion-col size="0.2"></ion-col>
-      <ion-col ion-col size-lg="1.95" size="12" (click)="goDetailPage()" *ngFor="let item of result">
-        <ion-thumbnail class="img-size">
-          <img src="{{ item.imageUrl }}">
-        </ion-thumbnail>
-        <ion-card-header>
-          <ion-col class="rowHeader">
-            <ion-text color="light" class="ion-no-padding">
-              {{item.name}}
-            </ion-text>
-          </ion-col>
-        </ion-card-header>
-      </ion-col>
-
-      <ion-col size="0.3"></ion-col>
-
-    </ion-row>
-  </ion-grid>
-
-  <!-- <ion-row>
-    <ion-col size="0.9" class="rowHeader" *ngFor="let item of result">
-      <ion-text color="light">
-        {{item.name}}
-      </ion-text>
-    </ion-col>
-    <ion-col size="3">
-    </ion-col>
-  </ion-row> -->
+  <div class="bigRow">
+    <ion-grid>
+      <ion-row>
+        <ion-col ion-col size-lg="1.99" size-md="4" size-sm="6" size="12" (click)="goDetailPage()"
+          *ngFor="let item of result">
+          <ion-thumbnail class="img-size">
+            <img src="{{ item.imageUrl }}">
+          </ion-thumbnail>
+          <ion-card-header>
+            <ion-col class="text-size">
+              <ion-text color="light" class="ion-no-padding">
+                {{item.name}}
+              </ion-text>
+            </ion-col>
+          </ion-card-header>
+        </ion-col>
+        <ion-col size="0.3"></ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 
 </ion-content>
