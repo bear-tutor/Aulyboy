@@ -20,4 +20,9 @@ export class CloudSyncService {
   public Getuser() {
     return this.http.get<User[]>('https://localhost:5001/api/' + 'User/');
   }
+
+  public getmoviesDetail(_id : string) {
+    return this.http.get<MovieDetail[]>('https://localhost:5001/api/' + 'Movie/' + _id);
+  }
+  // http://localhost:5000/api/Movie/p11
 }

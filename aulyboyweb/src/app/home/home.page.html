@@ -25,8 +25,8 @@
   <div class="bigRow">
     <ion-grid>
       <ion-row>
-        <ion-col ion-col size-lg="1.99" size-md="4" size-sm="6" size="12" (click)="goDetailPage()"
-          *ngFor="let item of result">
+        <ion-col ion-col size-lg="1.99" size-md="4" size-sm="6" size="12"
+          *ngFor="let item of result"   (click)="goDetailPage(item._id)">
           <ion-thumbnail class="img-size">
             <img src="{{ item.imageUrl }}">
           </ion-thumbnail>
