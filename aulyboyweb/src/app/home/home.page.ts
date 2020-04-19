@@ -31,7 +31,7 @@ export class HomePage {
   editProfile() {
     this.router.navigate(['/profile']);
   }
-  goDetailPage() {
-    this.router.navigate(['/detail-movie']);
+  goDetailPage(_id : string) {
+    this.router.navigate(['/detail-movie',_id]);
   }
 }
