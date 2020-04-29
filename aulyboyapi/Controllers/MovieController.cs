@@ -12,12 +12,7 @@ namespace aulyboyapi.Controllers
     public class MovieController : ControllerBase
 
     {
-        // GET api/values
-        [HttpGet]
-        public IEnumerable<Moviedetail> Get()
-        {
-            var movies = new Moviedetail[]
-            {
+        private static List<Moviedetail> movie = new List<Moviedetail>(){
                 new Moviedetail{_id =  "p01", Name = "ไซตามะไซตามะไซตามะไซตามะไซตามะ", ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRY9bMq4kHtIcAO8iHZVB_jXQlLI2QqSKUL7eyrg806X6Qd4Y5z&usqp=CAU"},
                 new Moviedetail{_id =  "p02", Name = "โดเรม่อนโดเรม่อน", ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSx0NiCFzDWvKdi-01dsGWa4s59qzkCrB-majX6OTKiZ6lBHQ1S&usqp=CAU"},
                 new Moviedetail{_id =  "p03", Name = "เทพมรณะ", ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLmwSH9kvLxcIKN2RrZSGSevrh8lV6NKadMfGkEOBijMnCzG5n&usqp=CAU"},
@@ -33,17 +28,39 @@ namespace aulyboyapi.Controllers
                 new Moviedetail{_id =  "p13", Name = "เทพมรณะ", ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLmwSH9kvLxcIKN2RrZSGSevrh8lV6NKadMfGkEOBijMnCzG5n&usqp=CAU"},
                 new Moviedetail{_id =  "p14", Name = "เทพมรณะ", ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLmwSH9kvLxcIKN2RrZSGSevrh8lV6NKadMfGkEOBijMnCzG5n&usqp=CAU"},
                 new Moviedetail{_id =  "p15", Name = "เทพมรณะ", ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLmwSH9kvLxcIKN2RrZSGSevrh8lV6NKadMfGkEOBijMnCzG5n&usqp=CAU"},
+        };
 
-            };
-            return movies;
+        // GET api/values
+        [HttpGet]
+        public IEnumerable<Moviedetail> Get()
+        {
+            return movie;
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
         public Moviedetail Get(string id)
         {
-            var findDetail = Get().FirstOrDefault(it => it._id == id);
+            var findDetail = movie.FirstOrDefault(it => it._id == id);
             return findDetail;
+        }
+
+        [HttpPost]
+        public void postmovie([FromBody] Moviedetail value)
+        {
+            movie.Add(value);
+        }
+
+        // DELETE api/values/5
+        [HttpDelete("{id}")]
+        public void Delete(string id)
+        {
+            var deleteMovie = movie.FirstOrDefault(it => it._id == id);
+            if (deleteMovie == null)
+            {
+
+            }
+            movie.Remove(deleteMovie);
         }
     }
 }
