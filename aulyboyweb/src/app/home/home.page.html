@@ -17,7 +17,7 @@
     </ion-col>
     <ion-col size="1">
       <h2>
-        <ion-label color="light" (click)="editProfile()">Profile</ion-label>
+        <ion-label color="light" (click)="editProfile()">Profile </ion-label>
       </h2>
     </ion-col>
   </ion-row>
@@ -28,7 +28,7 @@
         <ion-col ion-col size-lg="1.99" size-md="4" size-sm="6" size="12"
           *ngFor="let item of result"   (click)="goDetailPage(item._id)">
           <ion-thumbnail class="img-size">
-            <img src="{{ item.imageUrl }}">
+            <img [src]="item.imageUrl">
           </ion-thumbnail>
           <ion-card-header>
             <ion-col class="text-size">
